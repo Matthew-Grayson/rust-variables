@@ -1,6 +1,14 @@
 fn main() {
     let x = 5;
+    let x = x + 1;
+    {
+        let x = x * 2;
+        println!("The value of x in the inner scope is: {x}");
+    }
     println!("The value of x is: {x}");
-    x = 6; // This line produces a compile-time error because `x` is immutable
-    println!("The value of x is: {x}");
+
+    let spaces = "   ";
+    println!("The type of the variable spaces is: {}", std::any::type_name_of_val(&spaces));
+    let spaces = spaces.len();
+    println!("The type of the variable spaces is: {}", std::any::type_name_of_val(&spaces));
 }
