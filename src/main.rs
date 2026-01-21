@@ -1,6 +1,8 @@
 fn main() {
-    let x = 5;
+    const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
+    println!("Three hours in seconds: {THREE_HOURS_IN_SECONDS}");
+    let mut x = 5;
     println!("The value of x is: {x}");
-    x = 6; // This line produces a compile-time error because `x` is immutable
+    x = 6;
     println!("The value of x is: {x}");
 }
